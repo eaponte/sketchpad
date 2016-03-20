@@ -14,12 +14,35 @@ $(document).ready(function(){
 	var	currentSize = mediumSize;
 	var clickedSize = [];
 
+	// Get the current position of the canvas when position != static
+
+	function findPos(obj) {
+
+		var curleft = 0, curtop = 0;
+
+		if (obj.offsetParent) {
+
+			do {
+				curleft += obj.offsetLeft;
+				curtop += obj.offsetTop;
+			} while (obj = obj.offsetParent);
+
+			return { x: curleft, y: curtop };
+		}
+
+		return undefined;
+
+	}
+
 	// Mouse down event
 
 	$("#canvas").mousedown(function(e){
 
-		var mouseX = e.pageX - this.offsetLeft;
-		var mouseY = e.pageY - this.offsetTop;
+		var pos = findPos(this);
+
+		var mouseX = e.pageX - pos.x;
+		var mouseY = e.pageY - pos.y;
+
 		paint = true; // record if the mouse button is held down
 		addClick(mouseX, mouseY, false);
 		redraw();
@@ -47,8 +70,10 @@ $(document).ready(function(){
 
 	$("#canvas").mousemove(function(e){
 
+		var pos = findPos(this);
+
 		if(paint){
-			addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+			addClick(e.pageX - pos.x, e.pageY - pos.y, true);
 			redraw();
 		}
 

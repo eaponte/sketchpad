@@ -3,19 +3,28 @@ body {
 }
 
 #sketchpad-container {
-	width: 500px;
+	box-sizing: border-box;
+	position: absolute;
+	width: 520px;
+	top: 50%;
+	left: 50%;
+	margin-top: -313px;
+	margin-left: -260px;
+	padding-bottom: 3px;
 	font-family: sans-serif;
 	font-size: 12px;
-	margin: 5px auto 0;
 	border: 3px solid #36394F;
+	border-radius: 10px;
 	background-color: #FFE0BD;
 }
 
 #canvas {
 	/* both width and height must be styled inline in html */
-	margin-top: 3px;
+	cursor: cell;
 	background-color: #FFE0BD;
-	border-top: 3px solid #999999;
+	margin-top: 5px;
+	margin-left: 6px;
+	border: 1px solid #999999;
 }
 
 #sketchpad-container button {
