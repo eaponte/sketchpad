@@ -2,7 +2,7 @@ Sketchpad App
 
 
 
-- Direct link at http://www.eaponte.com/portfolio/apps/sketchpad/sketchpad.html
+- Direct link at https://eaponte.github.io/sketchpad/
 
 - Included in my cloud-based OS http://www.eaponte.com/portfolio/leo-os
 
