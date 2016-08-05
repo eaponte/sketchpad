@@ -85,3 +85,7 @@ body {
 	background-color: #36394F;
 	color: #FFFFFF;
 }
+
+#sketchpad-container #colors, #sketchpad-container #brush-sizes {
+	padding-bottom: 5px;
+}
