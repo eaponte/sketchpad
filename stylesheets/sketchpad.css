@@ -70,6 +70,7 @@ body {
 
 #sketchpad-container button.brushes {
 	margin-bottom: 8px;
+	text-align: left;
 }
 
 #sketchpad-container button:hover {
