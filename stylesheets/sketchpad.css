@@ -11,6 +11,7 @@ body {
 	padding-bottom: 3px;
 	font-family: sans-serif;
 	font-size: 12px;
+	text-align: center;
 	border: 3px solid #36394F;
 	border-radius: 10px;
 	background-color: #FFE0BD;
@@ -25,15 +26,50 @@ body {
 	border: 1px solid #999999;
 }
 
+#sketchpad-container #colors, #sketchpad-container #brush-sizes {
+	position: relative;
+	z-index: 5;
+	display: inline-block;
+	width: 100px;
+	height: 27px;
+	vertical-align: top;
+	margin: 5px;
+	padding: 3px;
+	color: #fff;
+	background-color: #36394F;
+	text-align: center;
+	line-height: 27px;
+	cursor: default;
+}
+
+#sketchpad-container #color-buttons, #sketchpad-container #brush-buttons {
+	display: none;
+	width: 100px;
+	list-style: none;
+	margin: 0;
+	margin-left: -3px;
+	padding: 3px;
+	background-color: #36394F;
+}
+
+#sketchpad-container #colors:hover #color-buttons, #sketchpad-container #brush-sizes:hover #brush-buttons {
+	display: inline-block;
+}
+
 #sketchpad-container button {
-	width: 80px;
+	width: 95px;
+	height: 35px;
 	font-family: sans-serif;
 	font-size: 12px;
 	line-height: 20px;
-	margin: 3px 0 0 5px;
+	margin: 5px 0;
 	border: 5px solid transparent;
 	border-radius: 18px;
 	transition: .4s;
+}
+
+#sketchpad-container button.brushes {
+	margin-bottom: 8px;
 }
 
 #sketchpad-container button:hover {
@@ -44,12 +80,8 @@ body {
 	outline: none;
 }
 
-#sketchpad-container button.colors {
-	height: 30px;
-}
-
-#sketchpad-container button.brushes, #sketchpad-container button#reset, #sketchpad-container button#eraser {
-	height: 35px;
+#sketchpad-container button#reset, #sketchpad-container button#eraser {
+	margin-left: 5px;
 }
 
 #sketchpad-container button#colorBlack {
@@ -78,7 +110,7 @@ body {
 }
 
 #sketchpad-container button#reset, #sketchpad-container button#eraser {
-	width: 90px;
+	width: 106px;
 }
 
 #sketchpad-container button.brushes, #sketchpad-container button#reset, #sketchpad-container button#eraser {
