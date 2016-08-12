@@ -13,29 +13,50 @@
 
 		<div id="colors">
 
-			<button class="colors" id="colorBlack" type="button" data-color="#191919">Black</button>
-			<button class="colors" id="colorRed" type="button" data-color="#CC0000">Red</button>
-			<button class="colors" id="colorGreen" type="button" data-color="#6DC066">Green</button>
-			<button class="colors" id="colorBlue" type="button" data-color="#0099CC">Blue</button>
-			<button class="colors" id="colorYellow" type="button" data-color="#FFFF66">Yellow</button>
+			<span>Color&nbsp;&#9660;</span>
 
+			<ul id="color-buttons">
+				<li><button class="colors" id="colorBlack" type="button" data-color="#191919">Black</button></li>
+				<li><button class="colors" id="colorRed" type="button" data-color="#CC0000">Red</button></li>
+				<li><button class="colors" id="colorGreen" type="button" data-color="#6DC066">Green</button></li>
+				<li><button class="colors" id="colorBlue" type="button" data-color="#0099CC">Blue</button></li>
+				<li><button class="colors" id="colorYellow" type="button" data-color="#FFFF66">Yellow</button></li>
+			</ul>
+			
 		</div> <!-- end colors -->
 
 		<div id="brush-sizes">
 
-			<button class="brushes" type="button" data-brush="5"><span style="font-size: 25px; vertical-align: middle;">&bull;</span> Small</button>
-			<button class="brushes" type="button" data-brush="10"><span style="font-size: 45px; vertical-align: middle;">&bull;</span> Med</button>
-			<button class="brushes" type="button" data-brush="15"><span style="font-size: 65px; vertical-align: middle;">&bull;</span> Lg</button>
-			<button class="brushes" type="button" data-brush="25"><span style="font-size: 75px; vertical-align: middle;">&bull;</span> XL</button>
+			<span>Brush Size&nbsp;&#9660;</span>
+			
+			<ul id="brush-buttons">
+				<li>
+					<button class="brushes" type="button" data-brush="5"><span style="font-size: 25px; vertical-align: middle;">&bull;</span> Small</button>
+				</li>
+				<li>
+					<button class="brushes" type="button" data-brush="10"><span style="font-size: 45px; vertical-align: middle;">&bull;</span> Med</button>
+				</li>
+				<li>
+					<button class="brushes" type="button" data-brush="15"><span style="font-size: 65px; vertical-align: middle;">&bull;</span> Lg</button>
+				</li>
+				<li>
+					<button class="brushes" type="button" data-brush="25"><span style="font-size: 75px; vertical-align: middle;">&bull;</span> XL</button>
+				</li>
+			</ul>
 
 		</div> <!-- end brush-sizes -->
 
-		<button id="reset" type="button">Start Over</button>
-		<button id="eraser" type="button">Eraser</button>
+			<button id="reset" type="button">Start Over</button>
+			<button id="eraser" type="button">Eraser</button>
 
-		<span>&nbsp;Current Setting: <span id="current-color">Black</span>&nbsp;<span id="current-size">&bull;&nbsp;Med</span></span>
+		<div>
 
-		<canvas id="canvas" width="500" height="435"></canvas>
+			<span>&nbsp;Current Setting: <span id="current-color">Black</span>&nbsp;<span id="current-size">&bull;&nbsp;Med</span></span>
+
+		</div>
+		
+
+		<canvas id="canvas" width="500" height="500"></canvas>
 
 	</div> <!-- end sketchpad-container -->
 
